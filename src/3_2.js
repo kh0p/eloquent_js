@@ -1,8 +1,9 @@
+// I'm not sure if it is correct fix for the isEven(-1) problem.
 function isEven(x) {
-  if (x < 0) {
+	if (x < 0) {
   	var stringX = String(x);
-    stringX =- stringX[0];
-    var x = Number(stringX);
+		var cutStringX = stringX.substring(1);
+    x = parseInt(cutStringX, 10);
     isEven(x);
   }
 	else if (x == 0) return true;
